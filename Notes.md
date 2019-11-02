@@ -9,17 +9,19 @@ Let's see these ways on following graph:
 
 ![](SIMPLE-GRAPH.jpg)
 
-### Adjacency List (can be implemented with a dictionary) { O(n) }
-A: (B, E, D)
-B: (A, C)
-C: (B, E, F)
-D: (A, E)
-E: (A, D, C, F)
-F: (C, E)
+### Adjacency List (can be implemented with a dictionary) => { O(n) }
+{
+    A: (B, E, D),
+    B: (A, C),
+    C: (B, E, F),
+    D: (A, E),
+    E: (A, D, C, F),
+    F: (C, E),
+}
 
 
-### Adjacency Matrix (can be implemented with two dimensional array/ array of arrays) { O(n^2) }
-1 => connected, 0 => not connected
+### Adjacency Matrix (can be implemented with two dimensional array/ array of arrays) => { O(n^2) }
+`1` => connected, `0` => not connected
 
    A B C D E F
 A `0 1 0 1 1 0`
