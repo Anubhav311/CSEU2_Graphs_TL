@@ -95,7 +95,20 @@ class Graph:
         starting_vertex to destination_vertex in
         depth-first order.
         """
-        pass  # TODO
+        stack = Stack()
+        visited = set()
+        stack.push([starting_vertex])
+        while stack.size() > 0:
+            path = stack.pop()
+            vertex = path[-1]
+            if vertex not in visited:
+                if vertex == destination_vertex:
+                    return path
+                visited.add(vertex)
+                for next_vert in self.vertices[vertex]:
+                    new_path = list(path)
+                    new_path.append(next_vert)
+                    stack.push(new_path)
 
 
 
@@ -135,7 +148,7 @@ if __name__ == '__main__':
         1, 2, 4, 7, 6, 3, 5
         1, 2, 4, 6, 3, 5, 7
     '''
-    print("Starting DFT")
+    print('\n', "Starting DFT")
     graph.dft(1)
 
     '''
@@ -153,7 +166,7 @@ if __name__ == '__main__':
         1, 2, 4, 3, 7, 6, 5
         1, 2, 4, 3, 7, 5, 6
     '''
-    print("Starting BFT")
+    print('\n', "Starting BFT")
     graph.bft(1)
 
     '''
@@ -163,14 +176,14 @@ if __name__ == '__main__':
         1, 2, 4, 7, 6, 3, 5
         1, 2, 4, 6, 3, 5, 7
     '''
-    print("Starting DFT_Recursive")
+    print('\n', "Starting DFT_Recursive")
     graph.dft_recursive(1)
 
     '''
     Valid BFS path:
         [1, 2, 4, 6]
     '''
-    print("Starting BFS")
+    print('\n', "Starting BFS")
     print(graph.bfs(1, 6))
 
     '''
@@ -178,4 +191,5 @@ if __name__ == '__main__':
         [1, 2, 4, 6]
         [1, 2, 4, 7, 6]
     '''
+    print('\n', "Starting DFS")
     print(graph.dfs(1, 6))
