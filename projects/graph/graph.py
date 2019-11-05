@@ -126,7 +126,7 @@ class Graph:
             # if vert is not in visited
             if vert not in visited:
                 # if vert is equal to target_value
-                if vert == target_value
+                if vert == target_value:
                     # return path
                     return path
                 # add vert to visited set
@@ -158,7 +158,7 @@ class Graph:
             # if vert is not in visited
             if vert not in visited:
                 # if vert is equal to target_value
-                if vert == target_value
+                if vert == target_value:
                     # return path
                     return path
                 # add vert to visited set
