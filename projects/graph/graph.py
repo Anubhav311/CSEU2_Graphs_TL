@@ -110,8 +110,37 @@ class Graph:
                     new_path.append(next_vert)
                     stack.push(new_path)
 
-
-
+    def bfs_path(self, starting_vertex_id, target_value):
+        # create a queue
+        qq = Queue()
+        # enqueue a list holding the starting vertex id
+        qq.enqueue([starting_vertex_id])
+        # created an empty visited set
+        visited = set()
+        # while the queue is not empty
+        while qq.size > 0:
+            # dequeue to the path
+            qq.dequeue()
+            # set a vert to the last item in the path
+            vert = path[-1]
+            # if vert is not in visited
+            if vert is not in visited:
+                # if vert is equal to target_value
+                if vert == target_value
+                    # return path
+                    return path
+                # add vert to visited set
+                visited.add(vert)
+                # loop over next vert in the vertices at the index of vert
+                for next_vert in self.vertices[vert]:
+                    # set a new path equal to a new list of the path (copy)
+                    new_path = list(path)
+                    # append next vert to new path
+                    new_path.append(next_vert)
+                    # enqueue the new path
+                    qq.enqueue(new_path)
+        # return None
+        return None
 
 
 if __name__ == '__main__':
