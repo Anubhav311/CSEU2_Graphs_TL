@@ -142,6 +142,38 @@ class Graph:
         # return None
         return None
 
+    def dfs_path(self, starting_vertex_id, target_value):
+        # create a stack
+        stack = Stack()
+        # push a list holding the starting vertex id
+        stack.push([starting_vertex_id])
+        # created an empty visited set
+        visited = set()
+        # while the stack is not empty
+        while stack.size > 0:
+            # pop to the path
+            stack.pop()
+            # set a vert to the last item in the path
+            vert = path[-1]
+            # if vert is not in visited
+            if vert is not in visited:
+                # if vert is equal to target_value
+                if vert == target_value
+                    # return path
+                    return path
+                # add vert to visited set
+                visited.add(vert)
+                # loop over next vert in the vertices at the index of vert
+                for next_vert in self.vertices[vert]:
+                    # set a new path equal to a new list of the path (copy)
+                    new_path = list(path)
+                    # append next vert to new path
+                    new_path.append(next_vert)
+                    # push the new path
+                    stack.push(new_path)
+        # return None
+        return None
+
 
 if __name__ == '__main__':
     graph = Graph()  # Instantiate your graph
