@@ -124,7 +124,7 @@ class Graph:
             # set a vert to the last item in the path
             vert = path[-1]
             # if vert is not in visited
-            if vert is not in visited:
+            if vert not in visited:
                 # if vert is equal to target_value
                 if vert == target_value
                     # return path
@@ -156,7 +156,7 @@ class Graph:
             # set a vert to the last item in the path
             vert = path[-1]
             # if vert is not in visited
-            if vert is not in visited:
+            if vert not in visited:
                 # if vert is equal to target_value
                 if vert == target_value
                     # return path
