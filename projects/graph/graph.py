@@ -118,9 +118,9 @@ class Graph:
         # created an empty visited set
         visited = set()
         # while the queue is not empty
-        while qq.size > 0:
+        while qq.size() > 0:
             # dequeue to the path
-            qq.dequeue()
+            path = qq.dequeue()
             # set a vert to the last item in the path
             vert = path[-1]
             # if vert is not in visited
@@ -150,9 +150,9 @@ class Graph:
         # created an empty visited set
         visited = set()
         # while the stack is not empty
-        while stack.size > 0:
+        while stack.size() > 0:
             # pop to the path
-            stack.pop()
+            path = stack.pop()
             # set a vert to the last item in the path
             vert = path[-1]
             # if vert is not in visited
